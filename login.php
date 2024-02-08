@@ -47,7 +47,8 @@ if (isset($_POST["loginbtn"])) {
                 $_SESSION ["userimg"] = $fetchedData ["userimg"];
 
                 print_r($_SESSION);
-                header("Location: index.php");
+                // header("Location: index.php");
+                echo '<script>window.location.href = "./index.php";</script>';
                 echo 'lol';
                 mysqli_close($connect);
                 exit();

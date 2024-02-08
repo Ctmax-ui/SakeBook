@@ -26,6 +26,13 @@ html {
     height: auto;
     color: white;
 }
+
+.post-time{
+    font-size: 15px !important;
+    color: #b0b0b0;
+}
+
+
 .which-user-posted{
     width: 20% !important;
 

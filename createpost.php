@@ -2,7 +2,8 @@
 session_start();
 
 if (!isset($_SESSION["login_status"])) {
-    header("Location: login.php");
+    // header("Location: login.php");
+    echo '<script>window.location.href = "./login.php";</script>';
     exit();
 }
 
@@ -51,10 +52,9 @@ if (isset($_POST["submitpost"])) {
         if ($result) {
             // echo $userid . " " . $posttitle . " " . $postdescription . " " . $userimg;
             mysqli_close($connect);
-            header("Location: index.php");
+            // header("Location: index.php");
+            echo '<script>window.location.href = "./login.php";</script>';
             exit();
-
-
         } else {
             echo "data uploding failed";
         }
@@ -74,19 +74,22 @@ if (isset($_POST["submitpost"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/extra.css" rel="stylesheet">
 </head>
 
 <body>
-<?php require_once("./utility/header.php"); ?>
+    <?php require_once("./utility/header.php"); ?>
 
     <div class="container mt-5">
-        <form class="d-grid justify-content-center align-items-center" action="./createpost.php" method="post" enctype="multipart/form-data">
+        <form class="d-grid justify-content-center align-items-center create-post-form-elem" action="./createpost.php" method="post" enctype="multipart/form-data">
 
-            <input type="text" name="posttitle" placeholder="Post Title">
+            <input type="text" name="posttitle" placeholder="Post Title" required>
 
-            <input type="text" name="postdescription" placeholder="Post Description">
+            <textarea name="postdescription" placeholder="What on your mind?" required></textarea>
 
-            <input type="file" name="postimg">
+
+                <input type="file" name="postimg" id="upload-photo">
+            
 
             <input type="submit" name="submitpost" value="Create">
 

@@ -2,7 +2,8 @@
 session_start();
 
 if (!isset($_SESSION["login_status"])) {
-    header("Location: login.php");
+    // header("Location: login.php");
+    echo '<script>window.location.href = "./login.php";</script>';
     exit();
 }
 require_once("./utility/connectdb.php");
@@ -77,7 +78,7 @@ function displayData($data)
                         <div class=" d-flex justify-content-between align-items-center">
                             <div class="d-flex mt-3 mx-3">
                                 <h3><?php echo displayData($row["postname"]); ?></h3>
-                                <p class="ms-3">Posted on <?php echo displayData($row["posttime"]); ?></p>
+                                <p class="ms-3 post-time">Posted on <?php echo displayData($row["posttime"]); ?></p>
                             </div>
                             <div class="which-user-posted mt-2">
                                 <ul>

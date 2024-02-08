@@ -1,7 +1,8 @@
 <?php
 session_start();
 if(!isset($_SESSION["login_status"])){
-    header("Location: login.php");
+    // header("Location: login.php");
+    echo '<script>window.location.href = "./login.php";</script>';
     exit();
 }
 
@@ -88,7 +89,8 @@ if (isset($_POST["edit"])) {
             
             if ($result) {  
                 mysqli_close($connect);
-                header("Location: userprofile.php");
+                // header("Location: userprofile.php");
+                echo '<script>window.location.href = "./userprofile.php";</script>';
                
                 exit();
             } else {
