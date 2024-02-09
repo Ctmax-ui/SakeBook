@@ -51,8 +51,8 @@ if (isset($_POST["create-btn"])) {
 
             if ($result) {
                 // sendMail($usermail, $createUsername, $createPassword);
-                // header("Location: login.php");
-                echo '<script>window.location.href = "./login.php";</script>';
+                header("Location: login.php");
+                // echo '<script>window.location.href = "./login.php";</script>';
                 exit();
             } else {
                 echo "Error: " . mysqli_error($connect);

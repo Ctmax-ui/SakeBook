@@ -23,13 +23,19 @@
 
 .user-profile-box {
     overflow: hidden;
-
+    width: 250px;
+    height: 250px;
+    border: 2px solid #000000;
+    border-radius: 100%;
+    background-color: #fff; 
 }
 
 .user-profile-box img {
     width: 250px;
     height: 250px;
-
+    display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .user-profile-box a {
@@ -52,11 +58,27 @@
     color: #cb2222;
 }
 
-
 .right-box {
-    padding-top: 2rem;
-    color: #000000;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
+.edit-profile{
+    margin-top: 3rem;
+    background: transparent;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 2px solid #464646 ;
+    color: #ffffff;
+    transition: all .4s ease;
+}
+.edit-profile:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+
 
 .right-box p:first-child {
     font-size: 2rem !important;
@@ -69,8 +91,15 @@
 
 /* __________________________________________Create post page_____________________________ */
 
+.small-container{
+    width: 60% !important;
+    margin: auto;
+    border: 1px solid #dee2e6;
+}
 
 
+
+/* 
 .create-post-form-elem {
     border: 2px solid #000000b7;
     width: 40%;
@@ -121,4 +150,4 @@
     color: #000;
     border: 2px solid #000;
     background-color: #fff;
-}
+} */

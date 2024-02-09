@@ -2,8 +2,8 @@
 session_start();
 
 if (!isset($_SESSION["login_status"])) {
-    // header("Location: login.php");
-    echo '<script>window.location.href = "./login.php";</script>';
+    header("Location: login.php");
+    // echo '<script>window.location.href = "./login.php";</script>';
     exit();
 }
 
@@ -45,15 +45,15 @@ if (isset($_POST["submitpost"])) {
             move_uploaded_file($_FILES['postimg']['tmp_name'], "postdata/" . $userimg);
         }
 
-        $uploadData = "INSERT INTO userpost (which_user_posted, postname, post_description, postimg, posttime) VALUES ('$userid', '$posttitle', '$postdescription', '$userimg', '$datetime') ";
+        $uploadDataIntoUserpostDB = "INSERT INTO userpost (which_user_posted, postname, post_description, postimg, posttime) VALUES ('$userid', '$posttitle', '$postdescription', '$userimg', '$datetime') ";
 
-        $result = mysqli_query($connect, $uploadData);
+        $resultOfFetchedPost = mysqli_query($connect, $uploadDataIntoUserpostDB);
 
-        if ($result) {
+        if ($resultOfFetchedPost) {
             // echo $userid . " " . $posttitle . " " . $postdescription . " " . $userimg;
             mysqli_close($connect);
             // header("Location: index.php");
-            echo '<script>window.location.href = "./login.php";</script>';
+            // echo '<script>window.location.href = "./login.php";</script>';
             exit();
         } else {
             echo "data uploding failed";
