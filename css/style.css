@@ -39,6 +39,7 @@ body{
     height: 100%;
     padding: 0;
     list-style: none !important;
+    position: absolute;
 }
 .left-section-nav li{
     text-align: left !important;

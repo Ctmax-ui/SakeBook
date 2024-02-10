@@ -92,12 +92,12 @@ function displayData($data)
                                             echo "./userdata/" . $_SESSION["userimg"];
                                         } else {
                                         } ?>" alt="No Profile Picture">
-                            <a href="./edituser.php"><i class="fa-solid fa-user-pen"></i></a>
+                            <a href="./editptofilepic.php"><i class="fa-regular fa-image pe-2"></i> <span> Change</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-7 right-box">
-                   <a class="edit-profile" href="./edituser.php"><i class="fa-solid fa-pen"></i> Edit Profile</a>
+                   <a class="edit-profile" href="./usersetting.php"><i class="fa-solid fa-pen"></i> Edit Profile</a>
                 </div>
             </div>
 

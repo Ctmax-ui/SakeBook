@@ -93,18 +93,18 @@ if (isset($_POST["submitpost"])) {
     <link href="./css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="overflow-hidden">
 
-    <div class="container main-container p-0">
+    <div class="container main-container p-0 ">
         <div class="row m-0 justify-content-between main-box">
 
             <div class="col-2 left-section-box p-0 mt-2">
                 <a class="site-logo" href="">Sakebook</a>
-                <ul class="left-section-nav mt-5">
-                    <li><a href="./index.php"><i class="fa-solid fa-home"></i> Home</a></li>
-                    <li><a href="./index.php"><i class="fa-solid fa-hashtag"></i> Explore</a></li>
-                    <li><a href="./userprofile.php"><i class="fa-solid fa-user"></i> Profile</a></li>
-                    <li><a href="./index.php"><i class="fa-solid fa-sliders"></i> More</a></li>
+                <ul class="left-section-nav mt-2">
+                    <li><a href="./index.php"><i class="fa-solid fa-home pe-2"></i> Home</a></li>
+                    <li><a href="./index.php"><i class="fa-solid fa-hashtag pe-2"></i> Explore</a></li>
+                    <li><a href="./userprofile.php"><i class="fa-solid fa-user pe-2"></i> Profile</a></li>
+                    <li><a href="./usersetting.php"><i class="fa-solid fa-sliders pe-2"></i> More</a></li>
                 </ul>
 
             </div>
