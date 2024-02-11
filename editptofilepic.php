@@ -65,8 +65,7 @@ if (isset($_POST["edit"])) {
 
             $updateData = "UPDATE users SET  userimg = '$filesValue' WHERE userid = '$userid'";
 
-                
-
+            
             $result = mysqli_query($connect, $updateData);
             
             if ($result) {  
@@ -98,12 +97,9 @@ if (isset($_POST["edit"])) {
 
 <body>
     
-<?php if (isset($_SESSION["userid"])) {
-            echo '<a class=" ms-2 ps-3 pt-1 position-absolute btn btn-outline-dark" href="./userprofile.php"><i class="fa-solid fa-arrow-left"></i> Go Back</a>';
-        } ?>
-        <?php if (isset($_SESSION["userid"])) {
-            echo '<a class="me-2 pe-3 pt-1 btn btn-outline-dark  position-absolute" style="right: 0;" href="./logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>';
-        } ?>
+
+          <a class=" ms-2 ps-3 pt-1 position-absolute btn btn-outline-dark" href="./usersetting.php"><i class="fa-solid fa-arrow-left"></i> Go Back</a>
+        <a class="me-2 pe-3 pt-1 btn btn-outline-dark  position-absolute" style="right: 0;" href="./logout.php"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
 
     <h4 class="text-center mt-4">Upload image to change your profile picture.</h4>
     <div class="d-flex justify-content-center aligin-items-center my-5 text-center">

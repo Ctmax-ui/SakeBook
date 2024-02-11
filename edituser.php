@@ -122,33 +122,33 @@ if (isset($_POST["edit"])) {
 
         <form class="text-center form-control p-3 w-25 m-auto was-validated" action="edituser.php" method="post" enctype="multipart/form-data">
 
-            <div class="form-floating mb-3">
-                <input class="form-control has-validated" type="text" name="username" placeholder="Create a Username" required value="<?php echo $getResult["username"] ?>">
-                <label for="floatingInput">Change UserName to</label>
-            </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control has-validated" type="text" name="username" placeholder="Create a Username" required value="<?php echo $getResult["username"] ?>">
+                    <label for="floatingInput">Change UserName to</label>
+                </div>
 
 
-            <div class="form-floating mb-3">
-                <input class="form-control" type="email" name="usermail" placeholder="Type your email" required value="<?php echo $getResult["usermail"]; ?>">
-                <label for="floatingInput">Put an valid Email</label>
-            </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" type="email" name="usermail" placeholder="Type your email" required value="<?php echo $getResult["usermail"]; ?>">
+                    <label for="floatingInput">Put an valid Email</label>
+                </div>
 
-            <div class="form-floating mb-3">
-                <input class="form-control" type="text" name="password" placeholder="Create a new pasword" required value="<?php echo $getResult["password"] ?>">
-                <label for="floatingPassword">Password</label>
-            </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" type="text" name="password" placeholder="Create a new pasword" required value="<?php echo $getResult["password"] ?>">
+                    <label for="floatingPassword">Password</label>
+                </div>
 
 
-            <div class=" border border-1 p-2">
-                <input class="form-imput" type="file" name="userfile"><br>
-                <img class="img-fluid mt-2" style="width: 150px; hight: auto;" src="./userdata/<?php echo $getResult["userimg"] ?>" alt="No Image">
-            </div>
+                <div class=" border border-1 p-2">
+                    <input class="form-imput" type="file" name="userfile"><br>
+                    <img class="img-fluid mt-2" style="width: 150px; hight: auto;" src="./userdata/<?php echo $getResult["userimg"] ?>" alt="No Image">
+                </div>
 
-            <input class="my-2 btn btn-outline-success" type="submit" name="edit" value="Edit"> <br>
+                <input class="my-2 btn btn-outline-success" type="submit" name="edit" value="Edit"> <br>
 
-            <?php if (!empty($errorMsg['errName'])) {
-                echo '<div class="text-danger mt-1">' . $errorMsg['errName'] . "</div>";
-            } ?>
+                <?php if (!empty($errorMsg['errName'])) {
+                    echo '<div class="text-danger mt-1">' . $errorMsg['errName'] . "</div>";
+                } ?>
 
         </form>
     </div>

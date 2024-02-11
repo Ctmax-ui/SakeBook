@@ -43,8 +43,8 @@ if (isset($_POST["loginbtn"])) {
                 $_SESSION["userid"] = $fetchedData["userid"];
                 $_SESSION["username"] = $fetchedData["username"];
                 $_SESSION["usermail"] = $fetchedData["usermail"];
-                $_SESSION ["password"] = $fetchedData ["password"];
-                $_SESSION ["userimg"] = $fetchedData ["userimg"];
+                $_SESSION["password"] = $fetchedData["password"];
+                $_SESSION["userimg"] = $fetchedData["userimg"];
 
                 print_r($_SESSION);
                 header("Location: index.php");
@@ -92,19 +92,26 @@ mysqli_close($connect);
 </head>
 
 <body>
-    <h2 class="text-center mt-3">Login</h2>
+    <h2 class="text-center mt-2 mb-1">Login</h2>
 
-    <form class="text-center form-control mt-5 p-3 w-25 m-auto was-validated" action="./login.php" method="post">
+    <form class="text-center form-control mt-4 p-3 w-25 m-auto was-validated" action="./login.php" method="post">
         <div class="form-floating mb-3">
             <input class="form-control" type="text" name="username" placeholder="Create a new pasword" required value="<?php echo $username; ?>">
             <label for="floatingPassword">Username</label>
         </div>
-        <div class="form-floating mb-3">
+        <div class="form-floating">
             <input class="form-control" type="text" name="password" placeholder="Create a new pasword" required value="<?php echo $password; ?>">
             <label for="floatingPassword">Password</label>
+            <!-- <a class="text-end" href="./forgetpassword.php">Forget password</a> -->
         </div>
-        <input class="my-2 btn btn-outline-success" type="submit" name="loginbtn" value="Login"><br>OR<br>
-        <a class="my-2 btn btn-outline-success" href="./createacc.php">Create Account</a>
+        <div class="text-end pt-1">
+            <a href="./forgetpassword.php">Forget password</a>
+        </div>
+
+
+        <input class="my-2 w-100 btn btn-outline-primary py-2" type="submit" name="loginbtn" value="Login">
+        <br>OR<br>
+        <a class="w-100 my-2 btn btn-outline-success py-2" href="./createacc.php">Create Account</a>
 
         <div class="position-relative mb-4 w-100 text-center d-flex justify-content-center">
             <div class="text-danger position-absolute warning-text ">

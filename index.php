@@ -138,7 +138,7 @@ if (isset($_POST["submitpost"])) {
                                 </div>
 
                                 <div class="col-3 my-auto">
-                                    <input type="submit" name="submitpost" value="Submit">
+                                    <input class="btn btn-outline-primary" type="submit" name="submitpost" value="Post">
                                 </div>
                             </div>
                         </form>

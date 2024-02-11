@@ -119,8 +119,8 @@ font: .9em sans-serif;
 
 input[name="submitpost"]{
 width: 100%;
-background: #fff;
-border: none;
+/* background: #fff;
+border: none; */
 padding: 8px 0;
 border-radius: 5px;
 font-size: 1.2rem;
@@ -129,9 +129,9 @@ transition: all .4s ease;
 
 }
 input[name="submitpost"]:hover{
-    background: #cfcfcf;
+    /* background: #cfcfcf;
     border-color: #828282;
-    color: #000000;
+    color: #000000; */
 }
 
 .right-section-box{
@@ -209,3 +209,18 @@ input[name="submitpost"]:hover{
 }
 
 
+/* _____________________for forget user password with otp page__________________*/
+.otp-input {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.otp-box {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+}

@@ -34,7 +34,7 @@ if (isset($_POST["create-btn"])) {
         } 
         else if (preg_match("/^[a-zA-Z-']+[0-9]*$/", $createUsername) && preg_match("/^[a-zA-Z0-9@!#\$%^&*:\"';>.,?\/~`+=_\-\\|]+$/", $createPassword)) {
 
-            $filesValue = "NULL";
+            $filesValue = null;
 
 
             // the file uploading logic
