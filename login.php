@@ -92,6 +92,7 @@ mysqli_close($connect);
 </head>
 
 <body>
+<h1 class="text-center mt-3 mb-5">Hello👍 Welcome to the Sakebook</h1>
     <h2 class="text-center mt-2 mb-1">Login</h2>
 
     <form class="text-center form-control mt-4 p-3 w-25 m-auto was-validated" action="./login.php" method="post">

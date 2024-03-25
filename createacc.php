@@ -31,8 +31,7 @@ if (isset($_POST["create-btn"])) {
 
         if (mysqli_num_rows($numrows) >= 1) {
             $errorMsg['errName'] = "The user name is already exsist.";
-        } 
-        else if (preg_match("/^[a-zA-Z-']+[0-9]*$/", $createUsername) && preg_match("/^[a-zA-Z0-9@!#\$%^&*:\"';>.,?\/~`+=_\-\\|]+$/", $createPassword)) {
+        } else if (preg_match("/^[a-zA-Z-']+[0-9]*$/", $createUsername) && preg_match("/^[a-zA-Z0-9@!#\$%^&*:\"';>.,?\/~`+=_\-\\|]+$/", $createPassword)) {
 
             $filesValue = null;
 
@@ -65,8 +64,7 @@ if (isset($_POST["create-btn"])) {
             $errorMsg['errName'] = "Password cannot contain space";
         } else {
         }
-    } 
-    else {
+    } else {
         // echo "Username or Pssword is empty!!";
         $errorMsg['errName'] = "Username or Pssword is empty!!";
     }
@@ -90,12 +88,25 @@ if (isset($_POST["create-btn"])) {
 
 <body>
 
-    <form action="./createacc.php" method="post" enctype="multipart/form-data">
-        <h3>Create account</h3>
-        <input type="text" name="create-username" placeholder="Username" value="<?php echo $createUsername; ?>" required>
-        <input type="email" name="create-usermail" placeholder="Email" value="<?php echo $createUsermail; ?>" required>
-        <input type="text" name="create-password" placeholder="Password" value="<?php echo $createPassword; ?>" required>
-        <input type="submit" name="create-btn" value="Create User">
+    <h2 class="text-center mt-2 mb-1">Create account</h2>
+    <form class="text-center form-control mt-4 p-3 w-25 m-auto was-validated" action="./createacc.php" method="post" enctype="multipart/form-data">
+
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="create-username" placeholder="Username" value="<?php echo $createUsername; ?>" required>
+            <label for="floatingPassword">Chose a username</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input class="form-control" type="email" name="create-usermail" placeholder="Email" value="<?php echo $createUsermail; ?>" required>
+            <label for="floatingPassword">Type your email</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="create-password" placeholder="Password" value="<?php echo $createPassword; ?>" required>
+            <label for="floatingPassword">Type your Password</label>
+        </div>
+
+        <input class="my-2 w-100 btn btn-outline-primary py-2" type="submit" name="create-btn" value="Create User">
 
         <p><?php if (!empty($errorMsg['errName'])) {
                 echo '<div class="text-danger mt-3">' . $errorMsg['errName'] . "</div>";

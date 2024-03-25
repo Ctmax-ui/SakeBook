@@ -3,6 +3,7 @@ session_start();
 
 
 require_once("./utility/connectdb.php");
+require_once("./vendor/mail/mail.php");
 
 $usermail = $userotp = $username = $otp = "";
 
@@ -33,9 +34,15 @@ if (isset($_POST["get-otp"])) {
             $result = mysqli_query($connect, $updateData);
             
             if ($result) {
+
                 $_SESSION["user_otp"] = $otp;
                 $_SESSION["temp_id"] = $fetchedUserid;
                 header("Location: forgetpasswordwithotp.php");
+
+                $senderMail =$getResult["usermail"];
+
+                sendMail($senderMail, $otp);
+
 
                 mysqli_close($connect);
                 // echo '<script>window.location.href = "./forgetpasswordwithotp";</script>';

@@ -102,7 +102,7 @@ function displayData($data)
             </div>
 
 
-            <h4 class="ms-5 ps-5 fw-bolder mt-1 username-paragraph"><?php echo displayData($fetchedData["username"]) ?></h4>
+            <h4 class="ms-5 ps-5 fw-bolder mt-1 username-paragraph">Name : <?php echo displayData($fetchedData["username"]) ?></h4>
         </div>
     </div>
 
