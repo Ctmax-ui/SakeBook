@@ -14,12 +14,12 @@ function sendMail($usermail, $otp, $no=null){
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'debjeetstak7@gmail.com';              //SMTP username
-    $mail->Password   = 'uptzteyzhqraelts';                     //SMTP password
+    $mail->Username   = '';              //SMTP username
+    $mail->Password   = '';                     //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;  
 
-    $mail->setFrom('debjeetstak7@gmail.com', 'Simple Form');
+    $mail->setFrom('@gmail.com', 'Simple Form');
     $mail->addAddress($usermail, 'Dear');                  //Add a recipient
     
     $mail->isHTML(true);                                        //Set email format to HTML
