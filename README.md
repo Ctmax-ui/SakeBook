@@ -22,7 +22,7 @@ This project is a social media application developed to facilitate online intera
 
 
 ## Installation
-### Here is the Demo of this social media application if you dont want to go through installation hassale.
+#### Here is the Demo of this social media application if you dont want to go through installation hassale.
 - [Sakebook](https://ctmax-ui-php-project.000webhostapp.com/)
 
 ----- Or run it personally -----
