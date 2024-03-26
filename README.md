@@ -25,7 +25,7 @@ This project is a social media application developed to facilitate online intera
 ### Here is the Demo of this social media application if you dont want to go through installation hassale.
 - [Sakebook](https://ctmax-ui-php-project.000webhostapp.com/)
 
------or run it personally-----
+----- Or run it personally -----
 
 1. Clone the repository: `git clone https://github.com/yourusername/social-media-project.git`
 2. Set up the database by importing the provided SQL file.
