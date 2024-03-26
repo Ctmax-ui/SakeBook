@@ -37,7 +37,7 @@ This project is a social media application developed to facilitate online intera
 
 ## Contributors
 
-- [Your Name](https://github.com/Ctmax-ui)
+- [Debjeet](https://github.com/Ctmax-ui)
 
 ## License
 
